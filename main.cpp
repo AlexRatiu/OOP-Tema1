@@ -11,10 +11,10 @@ public:
     {
         this->nrLinii = nrLinii;
         this->nrColoane = nrColoane;
-        for (int i = 0; i < nrLinii; ++i)
-            m[i] = new int[nrColoane];
-        for(int i = 0; i<nrLinii; i++)
-            for(int j = 0; j<nrColoane; j++)
+        for (int i = 0; i < this->nrLinii; i++)
+            m[i] = new int[this->nrColoane];
+        for(int i = 0; i<this->nrLinii; i++)
+            for(int j = 0; j<this->nrColoane; j++)
                 m[i][j] = x;
     }
 
