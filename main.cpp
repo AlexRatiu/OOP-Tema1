@@ -166,7 +166,8 @@ int main()
 
     Matrice m1 =  Matrice(n,m,x);
     Matrice m2 =  Matrice(n,m,y);
-
+    m1.setNrLinii(n);
+    m1.setNrColoane(m);
     switch(a)
     {
     case '+' :
