@@ -7,19 +7,15 @@ private:
     int **m = new int*[20];
 
 public:
-    Matrice(int nrL, int nrC,int x)
+    Matrice(int nrLinii, int nrColoane,int x)
     {
-        nrLinii=nrL;
-        nrColoane=nrC;
-        m=new int*[nrL];
-        int i,j;
-        for(i=0;i<nrL;i++)
-            m[i]=new int[nrC];
-
-        for(i=0;i<nrL;i++)
-            for(j=0;j<nrC;j++)
-            m[i][j]=x;
-
+        this->nrLinii = nrLinii;
+        this->nrColoane = nrColoane;
+        for (int i = 0; i < nrLinii; ++i)
+            m[i] = new int[nrColoane];
+        for(int i = 0; i<nrLinii; i++)
+            for(int j = 0; j<nrColoane; j++)
+                m[i][j] = x;
     }
 
 
@@ -100,13 +96,13 @@ public:
         return iStream;
     }
 
-    Matrice operator+(Matrice const &rhs)
+    Matrice operator+(const Matrice &rhs)
     {
         int S= this->m[0][0]+ rhs.m[0][0];
         return  Matrice(nrLinii,nrColoane,S);
     }
 
-    Matrice operator-(Matrice const &rhs)
+    Matrice operator-(const Matrice &rhs)
     {
         int D= this->m[0][0]- rhs.m[0][0];
         return  Matrice(nrLinii,nrColoane,D);
@@ -133,8 +129,7 @@ public:
 };
 int main()
 {
-    int n,m,x,y;
-    char a;
+    int n,m,x,y,a;
     cout<<"Introduceti numarul de linii: ";
     cin>>n;
     cout<<endl;
@@ -156,13 +151,13 @@ int main()
 
     switch(a)
     {
-    case '+' :
+    case 1 :
     {
         Matrice m3 = m1 + m2;
         cout<<m3;
         break;
     }
-    case '-' :
+    case 0 :
     {
         Matrice m4 = m1 - m2;
         cout<<m4;
