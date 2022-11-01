@@ -66,10 +66,10 @@ public:
         return  nrColoane;
     }
 
-    void setNrColoane(int nrColoane)
+    void setNrColoane(int _nrColoane)
     {
         if(nrColoane>=1 && nrColoane<=20)
-            this->nrColoane = nrColoane;
+            nrColoane = _nrColoane;
         else
         {
             cout<<"Datele nu au fost introduse corect. Numarul de coloane trebuie sa fie cuprins intre 1 si 20";
