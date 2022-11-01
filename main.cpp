@@ -156,9 +156,9 @@ int main()
     Matrice m2 =  Matrice(20,20,3);
     cin>>m1;
     cin>>m2;
-    Matrice m4 =  Matrice(20,20,3);
-    m4.setNrLinii(3);
-    m4.setNrColoane(3);
+    Matrice m5 =  Matrice(20,20,3);
+    m5.setNrLinii(3);
+    m5.setNrColoane(3);
 
     switch(a)
     {
