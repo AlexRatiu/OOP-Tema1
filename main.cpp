@@ -7,14 +7,14 @@ private:
     int **m = new int*[20];
 
 public:
-    Matrice(int _nrLinii, int _nrColoane,int x)
+    Matrice(int nrLinii, int nrColoane,int x)
     {
-        nrLinii = _nrLinii;
-        nrColoane = _nrColoane;
-        for (int i = 0; i < _nrLinii; ++i)
-            m[i] = new int[_nrColoane];
-        for(int i = 0; i<_nrLinii; i++)
-            for(int j = 0; j<_nrColoane; j++)
+        this->nrLinii = nrLinii;
+        this->nrColoane = nrColoane;
+        for (int i = 0; i < nrLinii; ++i)
+            m[i] = new int[nrColoane];
+        for(int i = 0; i<nrLinii; i++)
+            for(int j = 0; j<nrColoane; j++)
                 m[i][j] = x;
     }
 
@@ -138,7 +138,7 @@ public:
     ~Matrice()
     {
         for(int i = 0; i<nrLinii; i++)
-            delete [] m[i];
+            delete m[i];
         delete []m;
         cout<<"D:"<<endl;
     }
@@ -166,8 +166,7 @@ int main()
 
     Matrice m1 =  Matrice(n,m,x);
     Matrice m2 =  Matrice(n,m,y);
-    m1.setNrLinii(n);
-    m1.setNrColoane(m);
+
     switch(a)
     {
     case '+' :
