@@ -42,7 +42,7 @@ public:
     }
 
 
-     [[maybe_unused]] int getNrlinii() const
+     /*[[maybe_unused]] int getNrlinii() const
     {
         return  nrLinii;
     }
@@ -72,7 +72,7 @@ public:
             cout<<"Datele nu au fost introduse corect. Numarul de coloane trebuie sa fie cuprins intre 1 si 20";
             return;
         }
-    }
+    }*/
 
     Matrice& operator=(const Matrice& rhs)
     {
