@@ -162,8 +162,8 @@ int main()
 
     char a;
 
-    Matrice *m1 = new Matrice(n,m,x);
-    Matrice *m2 = new Matrice(n,m,y);
+    Matrice m1 =  Matrice(n,m,x);
+    Matrice m2 =  Matrice(n,m,y);
     cout<<"Ce operatie doriti sa efectuati?(+/-): ";
     cin>>a;
     cout<<endl;
@@ -171,13 +171,13 @@ int main()
     {
     case '+' :
     {
-        Matrice m3 = *m1 + *m2;
+        Matrice m3 = m1 + m2;
         cout<<m3;
         break;
     }
     case '-' :
     {
-        Matrice m4 = *m1 - *m2;
+        Matrice m4 = m1 - m2;
         cout<<m4;
         break;
     }
