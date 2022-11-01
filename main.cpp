@@ -50,10 +50,10 @@ public:
         return  nrLinii;
     }
 
-    void setNrLinii(int nrLinii)
+    void setNrLinii(int _nrLinii)
     {
         if(nrLinii>=1 && nrLinii<=20)
-            this->nrLinii = nrLinii;
+            nrLinii = _nrLinii;
         else
         {
             cout<<"Datele nu au fost introduse corect. Numarul de linii trebuie sa fie cuprins intre 1 si 20";
