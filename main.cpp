@@ -147,6 +147,7 @@ public:
 int main()
 {
     int n,m,x,y;
+    char a;
     cout<<"Introduceti numarul de linii: ";
     cin>>n;
     cout<<endl;
@@ -159,14 +160,13 @@ int main()
     cout<<"Introduceti valoarea din a doua matrice: ";
     cin>>y;
     cout<<endl;
-
-    char a;
-
-    Matrice m1 =  Matrice(n,m,x);
-    Matrice m2 =  Matrice(n,m,y);
     cout<<"Ce operatie doriti sa efectuati?(+/-): ";
     cin>>a;
     cout<<endl;
+
+    Matrice m1 =  Matrice(n,m,x);
+    Matrice m2 =  Matrice(n,m,y);
+
     switch(a)
     {
     case '+' :
