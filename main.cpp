@@ -156,8 +156,6 @@ int main()
     Matrice m2 =  Matrice(20,20,3);
     cin>>m1;
     cin>>m2;
-    m1.getNrlinii();
-    m2.getNrColoane();
 
     switch(a)
     {
@@ -176,8 +174,8 @@ int main()
     default:
         cout<<"EXIT";
     }
-    m1.setNrColoane(3);
-    m1.setNrLinii(3);
+    m2.setNrColoane(m1.getNrColoane());
+    m2.setNrLinii(m1.getNrlinii());
 
     return 0;
 }
