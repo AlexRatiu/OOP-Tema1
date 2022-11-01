@@ -139,8 +139,7 @@ public:
 };
 int main()
 {
-    int n,m,x,y;
-    char a;
+    int n,m,x,y,a;
     cout<<"Introduceti numarul de linii: ";
     cin>>n;
     cout<<endl;
@@ -162,13 +161,13 @@ int main()
 
     switch(a)
     {
-    case '+' :
+    case 1 :
     {
         Matrice m3 = m1 + m2;
         cout<<m3;
         break;
     }
-    case '-' :
+    case 0 :
     {
         Matrice m4 = m1 - m2;
         cout<<m4;
