@@ -38,39 +38,6 @@ public:
                 m[i][j] = rhs.m[i][j];
     }
 
-
-     [[maybe_unused]] int getNrlinii() const
-    {
-        return  nrLinii;
-    }
-
-    [[maybe_unused]] void setNrLinii(int _nrLinii)
-    {
-        if(nrLinii>=1 && nrLinii<=20)
-            nrLinii = _nrLinii;
-        else
-        {
-            cout<<"Datele nu au fost introduse corect. Numarul de linii trebuie sa fie cuprins intre 1 si 20";
-            return;
-        }
-    }
-
-    [[maybe_unused]] int getNrColoane() const
-    {
-        return  nrColoane;
-    }
-
-    [[maybe_unused]] void setNrColoane(int _nrColoane)
-    {
-        if(nrColoane>=1 && nrColoane<=20)
-            nrColoane = _nrColoane;
-        else
-        {
-            cout<<"Datele nu au fost introduse corect. Numarul de coloane trebuie sa fie cuprins intre 1 si 20";
-            return;
-        }
-    }
-
     Matrice& operator=(const Matrice& rhs)
     {
         nrLinii = rhs.nrLinii;
