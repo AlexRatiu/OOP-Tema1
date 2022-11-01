@@ -3,7 +3,7 @@ using namespace  std;
 class Matrice
 {
 private:
-    int nrLinii,nrColoane;
+    int nrLinii,nrColoane,el;
     int **m = new int*[20];
 
 public:
@@ -11,6 +11,7 @@ public:
     {
         this->nrLinii = nrLinii;
         this->nrColoane = nrColoane;
+        el=x;
         for (int i = 0; i < nrLinii; ++i)
             m[i] = new int[nrColoane];
         for(int i = 0; i<nrLinii; i++)
@@ -88,20 +89,24 @@ public:
         return oStream;
     }
 
-    friend istream &operator>>(istream& iStream, Matrice& m)
+    friend istream &operator>>(istream& iStream, Matrice& mat)
     {
         cout<<"Numarul de linii: ";
-        iStream>>m.nrLinii;
+        iStream>>mat.nrLinii;
         cout<<endl;
 
         cout<<"Numarul de coloane: ";
-        iStream>>m.nrColoane;
+        iStream>>mat.nrColoane;
         cout<<endl;
 
-        for(int i = 0; i<m.nrLinii; i++)
-            for (int j = 0; j < m.nrColoane; j++)
+        cout<<"Citeste elementul matricei: ";
+        iStream>>mat.el;
+        cout<<endl;
+
+        for(int i = 0; i<mat.nrLinii; i++)
+            for (int j = 0; j < mat.nrColoane; j++)
             {
-                iStream >> m.m[i][j];
+                mat.m[i][j]=mat.el;
             }
         return iStream;
     }
@@ -159,7 +164,8 @@ int main()
 
     Matrice m1 =  Matrice(3,3,3);
     Matrice m2 =  Matrice(3,3,3);
-
+    cin>>m1;
+    cin>>m2;
     switch(a)
     {
     case '+' :
