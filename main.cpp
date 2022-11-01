@@ -18,6 +18,16 @@ public:
                 m[i][j] = x;
     }
 
+    Matrice()
+    {
+        this->nrLinii = 1;
+        this->nrColoane = 1;
+        for (int i = 0; i < nrLinii; ++i)
+            m[i] = new int[nrColoane];
+        for(int i = 0; i<nrLinii; i++)
+            for(int j = 0; j<nrColoane; j++)
+                m[i][j] = 1;
+    }
 
     Matrice(const Matrice &rhs)
     {
@@ -129,7 +139,8 @@ public:
 };
 int main()
 {
-    int n,m,x,y,a;
+    int n,m,x,y;
+    char a;
     cout<<"Introduceti numarul de linii: ";
     cin>>n;
     cout<<endl;
@@ -151,18 +162,20 @@ int main()
 
     switch(a)
     {
-    case 1 :
+    case '+' :
     {
         Matrice m3 = m1 + m2;
         cout<<m3;
         break;
     }
-    case 0 :
+    case '-' :
     {
         Matrice m4 = m1 - m2;
         cout<<m4;
         break;
     }
+    default:
+        cout<<"EXIT";
     }
 
 
