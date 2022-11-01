@@ -71,7 +71,7 @@ public:
         }
     }
 
-    Matrice& operator=( Matrice const &rhs)
+    Matrice& operator=(const Matrice& rhs)
     {
         nrLinii = rhs.nrLinii;
         nrColoane = rhs.nrColoane;
@@ -106,15 +106,15 @@ public:
         return iStream;
     }
 
-    Matrice operator+( Matrice const &rhs)
+    Matrice operator+(Matrice const &rhs)
     {
-        int S= m[0][0]+ rhs.m[0][0];
+        int S= this->m[0][0]+ rhs.m[0][0];
         return  Matrice(nrLinii,nrColoane,S);
     }
 
-    Matrice operator-( Matrice const &rhs)
+    Matrice operator-(Matrice const &rhs)
     {
-        int D= m[0][0]- rhs.m[0][0];
+        int D= this->m[0][0]- rhs.m[0][0];
         return  Matrice(nrLinii,nrColoane,D);
     }
 
@@ -139,7 +139,8 @@ public:
 };
 int main()
 {
-    int n,m,x,y,a;
+    int n,m,x,y;
+    char a;
     cout<<"Introduceti numarul de linii: ";
     cin>>n;
     cout<<endl;
@@ -158,20 +159,19 @@ int main()
 
     Matrice m1 =  Matrice(n,m,x);
     Matrice m2 =  Matrice(n,m,y);
+
     switch(a)
     {
-    case 1 :
+    case '+' :
     {
-        Matrice m3 = Matrice(n,m,0);
-        m3 = m1 + m2;
+        Matrice m3 = m1 + m2;
         cout<<m3;
         break;
     }
-    case 0 :
+    case '-' :
     {
-        Matrice m3 = Matrice(n,m,0);
-        m3 = m1 - m2;
-        cout<<m3;
+        Matrice m4 = m1 - m2;
+        cout<<m4;
         break;
     }
     }
