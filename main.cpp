@@ -23,6 +23,7 @@ public:
     {
         this->nrLinii = 1;
         this->nrColoane = 1;
+        this->el = 1;
         for (int i = 0; i < nrLinii; ++i)
             m[i] = new int[nrColoane];
         for(int i = 0; i<nrLinii; i++)
@@ -76,6 +77,7 @@ public:
     {
         nrLinii = rhs.nrLinii;
         nrColoane = rhs.nrColoane;
+        el = rhs.el;
         for(int i= 0; i<nrLinii; i++)
             for(int j= 0; j<nrColoane; j++)
                 m[i][j] = rhs.m[i][j];
@@ -143,27 +145,14 @@ public:
 
 };
 int main()
-{char a;
-    /*int n,m,x,y;
-
-    cout<<"Introduceti numarul de linii: ";
-    cin>>n;
-    cout<<endl;
-    cout<<"Introduceti numarul de coloane: ";
-    cin>>m;
-    cout<<endl;
-    cout<<"Introduceti valoarea din prima matrice: ";
-    cin>>x;
-    cout<<endl;
-    cout<<"Introduceti valoarea din a doua matrice: ";
-    cin>>y;
-    cout<<endl;*/
+{
+    char a = '*';
     cout<<"Ce operatie doriti sa efectuati?(+/-): ";
     cin>>a;
     cout<<endl;
 
-    Matrice m1 =  Matrice(3,3,3);
-    Matrice m2 =  Matrice(3,3,3);
+    Matrice m1 =  Matrice(20,20,3);
+    Matrice m2 =  Matrice(20,20,3);
     cin>>m1;
     cin>>m2;
     switch(a)
