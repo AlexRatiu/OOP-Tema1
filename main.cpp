@@ -42,12 +42,12 @@ public:
     }
 
 
-     [[maybe_unused]] int getNrlinii() const
+    int getNrlinii() const
     {
         return  nrLinii;
     }
 
-    [[maybe_unused]] void setNrLinii(int _nrLinii)
+    void setNrLinii(int _nrLinii)
     {
         if(nrLinii>=1 && nrLinii<=20)
             nrLinii = _nrLinii;
@@ -58,12 +58,12 @@ public:
         }
     }
 
-    [[maybe_unused]] int getNrColoane() const
+    int getNrColoane() const
     {
         return  nrColoane;
     }
 
-    [[maybe_unused]] void setNrColoane(int _nrColoane)
+    void setNrColoane(int _nrColoane)
     {
         if(nrColoane>=1 && nrColoane<=20)
             nrColoane = _nrColoane;
@@ -156,9 +156,10 @@ int main()
     Matrice m2 =  Matrice(20,20,3);
     cin>>m1;
     cin>>m2;
-    Matrice m3 =  Matrice(20,20,3);
-    m3.setNrLinii(3);
-    m3.setNrColoane(3);
+    Matrice m4 =  Matrice(20,20,3);
+    m4.setNrLinii(3);
+    m4.setNrColoane(3);
+
     switch(a)
     {
     case '+' :
