@@ -106,13 +106,13 @@ public:
         return iStream;
     }
 
-    Matrice operator+(const Matrice &rhs)
+    Matrice operator+( Matrice &rhs)
     {
         int S= this->m[0][0]+ rhs.m[0][0];
         return  Matrice(nrLinii,nrColoane,S);
     }
 
-    Matrice operator-(const Matrice &rhs)
+    Matrice operator-( Matrice &rhs)
     {
         int D= this->m[0][0]- rhs.m[0][0];
         return  Matrice(nrLinii,nrColoane,D);
@@ -158,17 +158,18 @@ int main()
 
     Matrice m1 =  Matrice(n,m,x);
     Matrice m2 =  Matrice(n,m,y);
-    Matrice m3 = Matrice(n,m,0);
     switch(a)
     {
     case 1 :
     {
+        Matrice m3 = Matrice(n,m,0);
         m3 = m1 + m2;
         cout<<m3;
         break;
     }
     case 0 :
     {
+        Matrice m3 = Matrice(n,m,0);
         m3 = m1 - m2;
         cout<<m3;
         break;
