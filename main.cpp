@@ -158,19 +158,19 @@ int main()
 
     Matrice m1 =  Matrice(n,m,x);
     Matrice m2 =  Matrice(n,m,y);
-
+    Matrice m3 = Matrice(n,m,0);
     switch(a)
     {
     case 1 :
     {
-        Matrice m3 = m1 + m2;
+        m3 = m1 + m2;
         cout<<m3;
         break;
     }
     case 0 :
     {
-        Matrice m4 = m1 - m2;
-        cout<<m4;
+        m3 = m1 - m2;
+        cout<<m3;
         break;
     }
     }
