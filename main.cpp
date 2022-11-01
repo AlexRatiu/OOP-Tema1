@@ -7,14 +7,14 @@ private:
     int **m = new int*[20];
 
 public:
-    Matrice(int nrLinii, int nrColoane,int x)
+    Matrice(int _nrLinii, int _nrColoane,int x)
     {
-        this->nrLinii = nrLinii;
-        this->nrColoane = nrColoane;
-        for (int i = 0; i < nrLinii; ++i)
-            m[i] = new int[nrColoane];
-        for(int i = 0; i<nrLinii; i++)
-            for(int j = 0; j<nrColoane; j++)
+        nrLinii = _nrLinii;
+        nrColoane = _nrColoane;
+        for (int i = 0; i < _nrLinii; ++i)
+            m[i] = new int[_nrColoane];
+        for(int i = 0; i<_nrLinii; i++)
+            for(int j = 0; j<_nrColoane; j++)
                 m[i][j] = x;
     }
 
