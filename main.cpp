@@ -37,12 +37,12 @@ public:
             delete [] m[i];
         delete []m;
 
-        int **k = new int*[20];
+        int **m = new int*[20];
         for (int i = 0; i < nrLinii; ++i)
-            k[i] = new int[nrColoane];
+            m[i] = new int[nrColoane];
         for(int i= 0; i<nrLinii; i++)
             for(int j= 0; j<nrColoane; j++)
-                k[i][j] = rhs.m[i][j];
+                m[i][j] = rhs.m[i][j];
     }
 
     int getNrlinii() const
@@ -138,9 +138,8 @@ public:
     ~Matrice()
     {
         for(int i = 0; i<nrLinii; i++)
-            delete m[i];
+            delete [] m[i];
         delete []m;
-        cout<<"D:"<<endl;
     }
 
 };
