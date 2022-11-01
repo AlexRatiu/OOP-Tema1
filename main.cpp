@@ -176,7 +176,8 @@ int main()
     default:
         cout<<"EXIT";
     }
-
+    m1.setNrColoane(3);
+    m1.setNrLinii(3);
 
     return 0;
 }
