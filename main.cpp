@@ -147,17 +147,20 @@ public:
 };
 int main()
 {
+    Matrice m1 =  Matrice(20,20,3);
+    Matrice m2 =  Matrice(20,20,3);
+    cout<<"Introduceti datele pentru prima matrice."<<endl;
+    cin>>m1;
+    cout<<"Introduceti datele pentru a doua matrice."<<endl;
+    cin>>m2;
+    m2.setNrLinii(m1.getNrlinii());
+    m2.setNrColoane(m1.getNrColoane());
+
     char a = '*';
     cout<<"Ce operatie doriti sa efectuati?(+/-): ";
     cin>>a;
     cout<<endl;
 
-    Matrice m1 =  Matrice(20,20,3);
-    Matrice m2 =  Matrice(20,20,3);
-    cin>>m1;
-    cin>>m2;
-    m2.setNrLinii(m1.getNrlinii());
-    m2.setNrColoane(m1.getNrColoane());
     switch(a)
     {
     case '+' :
@@ -175,7 +178,6 @@ int main()
     default:
         cout<<"EXIT";
     }
-
 
     return 0;
 }
