@@ -33,13 +33,6 @@ public:
     {
         nrLinii = rhs.nrLinii;
         nrColoane = rhs.nrColoane;
-        for(int i = 0; i<nrLinii; i++)
-            delete [] m[i];
-        delete []m;
-
-        int **m = new int*[20];
-        for (int i = 0; i < nrLinii; ++i)
-            m[i] = new int[nrColoane];
         for(int i= 0; i<nrLinii; i++)
             for(int j= 0; j<nrColoane; j++)
                 m[i][j] = rhs.m[i][j];
