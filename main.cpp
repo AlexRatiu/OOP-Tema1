@@ -4,37 +4,24 @@ class Matrice
 {
 private:
     int nrLinii,nrColoane;
-    int **m;
-    void allocMatrix()
-    {
-       m= new int *[nrLinii];
-       for(int i=0; i<nrLinii; i++)
-            m[i]=new int [nrColoane];
-    }
+    int **m = new int*[20];
 
 public:
     Matrice(int nrL, int nrC,int x)
     {
-
         nrLinii=nrL;
         nrColoane=nrC;
-        allocMatrix();
-        for(int i=0;i<nrLinii;i++)
-            for(int j=0;j<nrColoane;j++)
-                m[i][j] = x;
+        m=new int*[nrL];
+        int i,j;
+        for(i=0;i<nrL;i++)
+            m[i]=new int[nrC];
 
+        for(i=0;i<nrL;i++)
+            for(j=0;j<nrC;j++)
+            m[i][j]=x;
 
     }
 
-    Matrice()
-    {
-        nrLinii = 1;
-        nrColoane = 1;
-        allocMatrix();
-        for(int i = 0; i<nrLinii; i++)
-            for(int j = 0; j<nrColoane; j++)
-                m[i][j] = 1;
-    }
 
     Matrice(const Matrice &rhs)
     {
