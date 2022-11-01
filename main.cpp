@@ -165,6 +165,9 @@ int main()
 
     Matrice m1 =  Matrice(n,m,x);
     Matrice m2 =  Matrice(n,m,y);
+    Matrice m3 = Matrice(3,3,3);
+    m3.setNrColoane(4);
+    m3.setNrLinii(4);
 
     switch(a)
     {
