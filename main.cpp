@@ -4,13 +4,15 @@ class Matrice
 {
 private:
     int nrLinii,nrColoane;
-    int m[20][20];
+    int **m = new int*[20];
 
 public:
     Matrice(int _nrLinii, int _nrColoane,int x)
     {
         nrLinii = _nrLinii;
         nrColoane = _nrColoane;
+        for (int i = 0; i < _nrLinii; ++i)
+            m[i] = new int[_nrColoane];
         for(int i = 0; i<_nrLinii; i++)
             for(int j = 0; j<_nrColoane; j++)
                 m[i][j] = x;
@@ -20,6 +22,8 @@ public:
     {
         this->nrLinii = 1;
         this->nrColoane = 1;
+        for (int i = 0; i < nrLinii; ++i)
+            m[i] = new int[nrColoane];
         for(int i = 0; i<nrLinii; i++)
             for(int j = 0; j<nrColoane; j++)
                 m[i][j] = 1;
@@ -33,7 +37,9 @@ public:
             delete [] m[i];
         delete []m;
 
-        int m[20][20];
+        int **m = new int*[20];
+        for (int i = 0; i < nrLinii; ++i)
+            m[i] = new int[nrColoane];
         for(int i= 0; i<nrLinii; i++)
             for(int j= 0; j<nrColoane; j++)
                 m[i][j] = rhs.m[i][j];
@@ -176,8 +182,7 @@ int main()
         break;
     }
     }
-    delete m1;
-    delete m2;
+
 
     return 0;
 }
