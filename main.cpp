@@ -45,12 +45,13 @@ public:
                 m[i][j] = rhs.m[i][j];
     }
 
-    int getNrlinii() const
+
+     [[maybe_unused]] int getNrlinii() const
     {
         return  nrLinii;
     }
 
-    void setNrLinii(int _nrLinii)
+    [[maybe_unused]] void setNrLinii(int _nrLinii)
     {
         if(nrLinii>=1 && nrLinii<=20)
             nrLinii = _nrLinii;
@@ -61,12 +62,12 @@ public:
         }
     }
 
-    int getNrColoane() const
+    [[maybe_unused]] int getNrColoane() const
     {
         return  nrColoane;
     }
 
-    void setNrColoane(int _nrColoane)
+    [[maybe_unused]] void setNrColoane(int _nrColoane)
     {
         if(nrColoane>=1 && nrColoane<=20)
             nrColoane = _nrColoane;
