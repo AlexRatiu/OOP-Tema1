@@ -71,7 +71,7 @@ public:
         }
     }
 
-    Matrice& operator=(const Matrice& rhs)
+    Matrice& operator=( Matrice const &rhs)
     {
         nrLinii = rhs.nrLinii;
         nrColoane = rhs.nrColoane;
@@ -106,15 +106,15 @@ public:
         return iStream;
     }
 
-    Matrice operator+( Matrice &rhs)
+    Matrice operator+( Matrice const &rhs)
     {
-        int S= this->m[0][0]+ rhs.m[0][0];
+        int S= m[0][0]+ rhs.m[0][0];
         return  Matrice(nrLinii,nrColoane,S);
     }
 
-    Matrice operator-( Matrice &rhs)
+    Matrice operator-( Matrice const &rhs)
     {
-        int D= this->m[0][0]- rhs.m[0][0];
+        int D= m[0][0]- rhs.m[0][0];
         return  Matrice(nrLinii,nrColoane,D);
     }
 
